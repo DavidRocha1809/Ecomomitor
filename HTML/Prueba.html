@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="prueba.css">
+    <title>Monitoreo de Cultivos - Blynk</title>
+</head>
+
+<body>
+
+    <h1>Monitoreo de Cultivos con "Blynk"</h1>
+    <div class="widget">
+        <h2>Temperatura del Suelo</h2>
+        <p id="temperature">Cargando...</p>
+    </div>
+
+    <!--  Conexión de datos a Blynk  -->
+    <script>
+        const token = 'TU_TOKEN_DE_BLYNK'; // Reemplaza con tu token de Blynk
+        const vPin = 'V1'; // El pin virtual que estás monitoreando (ej. V1)
+
+        async function getBlynkData() {
+            try {
+                const response = await fetch(`http://blynk-cloud.com/${token}/get/${vPin}`);
+                const data = await response.json();
+                document.getElementById('temperature').innerText = `${data[0]} °C`;
+            } catch (error) {
+                document.getElementById('temperature').innerText = 'Error al obtener datos';
+            }
+        }
+
+        getBlynkData();
+        // Actualiza los datos cada 5 segundos
+        setInterval(getBlynkData, 5000);
+    </script>
+    
+</body>
+
+</html>
