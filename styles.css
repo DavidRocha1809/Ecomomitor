@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    margin: 0;
+    min-height: 100vh;
+    border: 2px solid #006400; /* Borde verde oscuro alrededor del cuerpo */
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-bottom: 4px solid #006400; /* Borde verde oscuro en el encabezado */
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    margin-right: 1000px;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    border-left: 2px solid #006400; /* Borde verde oscuro en el contenedor */
+    border-right: 2px solid #006400; /* Borde verde oscuro en el contenedor */
+}
+
+aside {
+    width: 200px;
+    padding: 10px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #006400; /* Borde verde oscuro a la derecha del aside */
+}
+
+aside h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+aside button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #444;
+    color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+aside button:hover {
+    background-color: #555;
+}
+
+.a{
+    text-decoration: none;
+    color: white;
+}
+
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3a3a3a;
+    border-left: 2px solid #006400; /* Borde verde oscuro a la izquierda del main */
+    border-radius: 8px;
+}
+
+#widget {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 8px;
+    color: #f0f0f0;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #006400; /* Borde verde oscuro en el widget */
+}
+
+#measurement-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#measurement-value {
+    font-size: 1.2em;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+#simple-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    height: 200px;
+    background-color: #444;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #006400; /* Borde verde oscuro en el gráfico */
+}
+
+.bar {
+    width: 20px;
+    background-color: #66c2a5;
+    border-radius: 5px 5px 0 0;
+    transition: height 0.3s;
+}
+
+.bar-label {
+    font-size: 0.8em;
+    color: #f0f0f0;
+    text-align: center;
+    margin-top: 5px;
+}
