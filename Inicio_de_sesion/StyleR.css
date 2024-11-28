@@ -1,0 +1,148 @@
+/*Modificando todo el documento*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Modificaciones al BODY*/
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+
+
+
+
+
+/*    --------------------------------------------------------------    */
+/*    |                     Contenido principal                    |    */
+/*    --------------------------------------------------------------    */
+
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-arrow i {
+    font-size: 24px; /* Asegúrate de que el icono tenga el tamaño correcto */
+    color: black; /* Puedes ajustar el color si es necesario */
+}
+
+/*Contenedor principal*/
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*Título */
+h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/*"subtítulo"*/ 
+p {
+    text-align: left;
+    font-size: 12px;
+    color: #888;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/*Formulario posicionamiento*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/**/
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/*Columnas: Nombre, Apellido*/
+.col {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/*Margen derecho de apellido*/
+.col:last-child {
+    margin-right: 0;
+}
+
+/*Label de los input*/
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/*Dimensiones de los input del formulario*/
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/*Botón generar contraseña diseño*/
+button .generate{
+    padding-bottom: 50px;
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*Botón diseño*/
+button {
+    padding: 10px 20px;
+    background-color: #ddd;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*Transición del botón*/
+button:hover {
+    background-color: black;
+    color: #ddd;
+}
+
+a{
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: normal; 
+  }
+/*    --------------------------------------------------------------    */
+/*    |                    Fin contenido principal                 |    */
+/*    --------------------------------------------------------------    */
+
+

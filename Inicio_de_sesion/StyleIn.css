@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*body xd*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+/*Contenedor principal del login*/
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/*Título principal "Bienvenidos"*/
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/*Flecha "regresar"*/
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+/*Subtítulo "Inicia sesión o Regístrate"*/
+p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/*Formulario general de inicio de sesión*/
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/**/
+label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/*Inputs de correo y contraseña*/
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+/*Input de password */
+.password-container {
+    position: relative;
+}
+
+/*Input de password*/
+.password-container input {
+    padding-right: 40px;
+}
+
+
+/*Aclaración de cómo debe ir la contraseña*/
+.password-hint {
+    text-align: left;
+    font-size: 12px;
+    color: #888;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/*Contenedor inferior: botón, checkbox, links*/
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/*link*/
+.forgot-password {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/*Botón login*/
+.login-btn {
+    background-color: #ddd;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/*Transición del botón login*/
+.login-btn:hover {
+    background-color: black;
+    color: #ddd;
+}
+
+
+/*NO HAY PARA ABAJO*/
+
+/*Login con redes sociales*/
+.or-login {
+    margin-bottom: 10px;
+}
+
+/*Redes sociales*/
+.social-login {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Redes sociales*/
+.social-login button {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*redes*/
+.google-btn {
+    color: #DB4437;
+}
+
+/*redes*/
+.apple-btn {
+    color: #000;
+}
+
+/*redes*/
+.twitter-btn {
+    color: #1DA1F2;
+}
+
+/*redes*/
+.signup-link {
+    margin-top: 20px;
+}
+
+/*redes*/
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+
+/*
+        <p class="or-login">O Inicia sesión con:</p>
+        <div class="social-login">
+            <button class="google-btn">Google</button>
+            <button class="apple-btn">Apple</button>
+            <button class="twitter-btn">Twitter</button>
+        </div>
+*/
