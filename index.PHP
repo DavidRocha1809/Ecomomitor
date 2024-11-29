@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 ?>
@@ -22,33 +23,52 @@ session_start();
     <div class="container">
         <!-- Barra de navegación derecha -->
         <aside>
-            <h2>Seleccionar Medición</h2>
-            <button onclick="showMeasurement('humidity')">Humedad</button>
-            <button onclick="showMeasurement('temperature')">Temperatura</button>
-            <button onclick="showMeasurement('purity')">Pureza</button>
-            <h2>API Extra</h2>
-            <a href="cultivos.html" style="text-decoration: none; color: white;"><button onclick="showApi1Data()">Guía de Cultivos</button></a>
-            <h2>Usuario</h2>
-            <a style="text-decoration: none; color: white;" href="Inicio_de_sesion/Inicio.php"><button >
+            <?php if(isset($_SESSION['Email'])) : ?>
+            
+                <h2>Seleccionar Medición</h2>
+                <button onclick="showMeasurement('humidity')">Humedad</button>
+                <button onclick="showMeasurement('temperature')">Temperatura</button>
+                <button onclick="showMeasurement('purity')">Pureza</button>
+                <h2>API Extra</h2>
+                <a href="cultivos.html" style="text-decoration: none; color: white;"><button onclick="showApi1Data()">Guía de Cultivos</button></a>
+                
+            <?php endif; ?>
+
+                <h2>Usuario</h2>
+                <a style="text-decoration: none; color: white;" href="Inicio_de_sesion/Inicio.php"><button >
             
             <?php
+
                 if(!isset($_SESSION['Email'])){
                     echo 'Inicio de Sesión';
                 } else{
                     echo 'Perfil';
                 }
+                
             ?>
         </aside>
 
         <!-- Área principal para los widgets -->
-        <main id="data-display">
-            <div id="widget">
-                <h2 id="measurement-title">Medida Seleccionada</h2>
-                <p id="measurement-value">Valor: --</p>
-                <canvas id="measurement-doughnut" width="400" height="400"></canvas>
-            </div>
-            
-        </main>
+
+        <?php if(isset($_SESSION['Email'])) : ?>
+
+            <main id="data-display">
+                <div id="widget">
+                    <h2 id="measurement-title">Medida Seleccionada</h2>
+                    <p id="measurement-value">Valor: --</p>
+                    <canvas id="measurement-doughnut" width="400" height="400"></canvas>
+                </div>
+                
+            </main>
+
+        <?php endif; ?>
+
+        <?php
+            if(!isset($_SESSION['Email'])){
+                echo 'Para ver tus datos en Ecomonitor, inicia sesión:)';
+            }
+        ?>
+
     </div>
 
     <!-- Scripts -->
